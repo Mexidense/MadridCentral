@@ -23,6 +23,15 @@ class HallmarksController extends Controller
         }
     }
 
+    public function show(Request $request){
+        try{
+            $id = $request->input('plate');
+            return  redirect('matricula/' . $id);
+        }catch (\Exception $e){
+            return redirect('/');
+        }
+    }
+
     public function tagType($tag){
         switch ($tag){
             case '16T0':

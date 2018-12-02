@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('hallmark.home');
 });
 
-Route::get('/{id}', [
+Route::get('/matricula/{id}', [
     'uses' => 'HallmarksController@getTag',
+]);
+
+Route::get('/matricula', [
+    'uses' => 'HallmarksController@show',
 ]);

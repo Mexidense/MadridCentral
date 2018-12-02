@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Madrid Central es una zona de bajas emisiones que comenzará a funcionar el viernes 30 de noviembre de 2018. Esta medida, la primera del Plan A de Calidad del Aire y Cambio Climático, favorecerá al peatón, la bicicleta y el transporte público, que ganarán en protagonismo y espacio también con la reforma de calles como Gran Vía o Atocha. El distrito Centro se convertirá en un pulmón para la ciudad en pleno corazón de Madrid.">
     <meta name="author" content="Salvador B.">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../img/favicon.ico">
 
     <title>Madrid Central</title>
 
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-    <link href="css/blog.css" rel="stylesheet">
+    <link href="../css/blog.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,16 +44,34 @@
         </div>
     </header>
     <div class="jumbotron row text-white rounded bg-dark">
-        <div class="col-md-8">
-            <h1 class="display-4 font-italic">Madrid Central 2018</h1>
+        <div class="col-md-7">
+            <h1 class="display-4 font-italic font-weight-bold">Madrid Central 2018</h1>
             <p>
-                Para la matricula: <h1>{{ $hallmark->id }}</h1>
+                <div class="matricula">
+                    <img src="{{URL::asset('img/matricula.png')}}" alt="Matricula">
+                    <div class="numero-matricula">
+                        <h2>{{ $hallmark->id }}</h2>
+                    </div>
+                </div>
             </p>
             <p>
-                Su etiqueta es: <h1>{{ $hallmark->tagType }}</h1>
+                Su etiqueta es:
+            <h1>
+                @if($hallmark->tagType == 'NOT')
+                    <div class="etiqueta-not rounded">SIN DISTINTIVO</div>
+                @elseif ($hallmark->tagType == 'B')
+                    <div class="etiqueta-b rounded">B</div>
+                @elseif ($hallmark->tagType == 'C')
+                    <div class="etiqueta-c rounded">C</div>
+                @elseif ($hallmark->tagType == 'ECO')
+                    <div class="etiqueta-c rounded">E</div><div class="etiqueta-0">C</div><div class="etiqueta-c">0</div>
+                @elseif ($hallmark->tagType == '0')
+                    <div class="etiqueta-0 rounded">0</div>
+                @endif
+            </h1>
             </p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <img src="{{URL::asset('img/tags/' . $hallmark->tagType . '.png')}}" alt="Etiqueta {{$hallmark->tagType}}" height="350" width="350">
         </div>
     </div>
