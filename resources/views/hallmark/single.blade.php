@@ -1,0 +1,1 @@
+<h1>Etiqueta: {{ $hallmark->tag }}</h1>
