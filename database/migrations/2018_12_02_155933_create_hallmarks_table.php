@@ -15,6 +15,8 @@ class CreateHallmarksTable extends Migration
     {
         Schema::create('hallmarks', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('plate', 20);
+            $table->string('tag',20);
             $table->timestamps();
         });
     }
