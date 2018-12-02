@@ -2,22 +2,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-    {{--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>--}}
-    {{--<script>--}}
-    {{--(adsbygoogle = window.adsbygoogle || []).push({--}}
-    {{--google_ad_client: "ca-pub-4137127071067215",--}}
-    {{--enable_page_level_ads: true--}}
-    {{--});--}}
-    {{--</script>--}}
-    {{--<!-- Global site tag (gtag.js) - Google Analytics -->--}}
-    {{--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130235235-1"></script>--}}
-    {{--<script>--}}
-    {{--window.dataLayer = window.dataLayer || [];--}}
-    {{--function gtag(){dataLayer.push(arguments);}--}}
-    {{--gtag('js', new Date());--}}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4137127071067215",
+    enable_page_level_ads: true
+    });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130235235-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    {{--gtag('config', 'UA-130235235-1');--}}
-    {{--</script>--}}
+    gtag('config', 'UA-130235235-1');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
