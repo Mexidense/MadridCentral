@@ -14,7 +14,6 @@ class CreateHallmarksTable extends Migration
     public function up()
     {
         Schema::create('hallmarks', function (Blueprint $table) {
-            $table->increments('id');
             $table->string('plate', 20);
             $table->string('tag',20);
             $table->timestamps();
