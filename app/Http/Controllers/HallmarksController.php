@@ -26,7 +26,10 @@ class HallmarksController extends Controller
     public function show(Request $request){
         try{
             $id = $request->input('plate');
-            return  redirect('matricula/' . $id);
+            if($id != '')
+                return  redirect('matricula/' . $id);
+            else
+                return redirect('/');
         }catch (\Exception $e){
             return redirect('/');
         }
