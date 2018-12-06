@@ -2,12 +2,17 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Hallmark extends Model
+class Hallmark extends Eloquent
 {
-    protected $table = 'hallmarks';
+    protected $connection ='mongodb';
+    protected $collection = 'Hallmarks';
     protected $primaryKey = 'plate';
+
+//    protected $table = 'hallmarks';
+//    protected $primaryKey = 'plate';
     protected $fillable = [
         'plate',
         'tag',

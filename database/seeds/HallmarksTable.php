@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Hallmark;
 
 class HallmarksTable extends Seeder
 {
@@ -23,17 +24,23 @@ class HallmarksTable extends Seeder
                     continue;
                 }
                 $explodeLine = explode('|', $line);
+                $plate = $explodeLine[0];
+                $tag = $explodeLine[1];
 
-                DB::table('hallmarks')->insert([
-                    'plate' => $explodeLine[0],
-                    'tag' => $explodeLine[1],
-                ]);
-//                echo ($explodeLine[0]);
+
+                $hallmark = new Hallmark();
+                $hallmark->plate = $plate;
+                $hallmark->tag = $tag;
+                $hallmark->save();
+
+                print($plate . ' ');
+
             }
         }
         catch (\Symfony\Component\HttpFoundation\File\Exception\FileException $exception)
         {
             die("Error: " . $exception);
         }
+
     }
 }
