@@ -30,3 +30,7 @@ Route::get('/info', function () {
 Route::get('/api', function () {
     return view('hallmark.api');
 });
+
+Route::get('/contact', function () {
+    return view('hallmark.contact');
+});

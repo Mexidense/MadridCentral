@@ -40,7 +40,7 @@
                 </a>
                 <a class="py-2 d-none d-md-inline-block" href="/info">Información general</a>
                 <a class="py-2 d-none d-md-inline-block" href="/api">API</a>
-                <a class="py-2 d-none d-md-inline-block" href="#">Contacto</a>
+                <a class="py-2 d-none d-md-inline-block" href="/contact">Contacto</a>
             </div>
         </nav>
     </header>
