@@ -22,3 +22,7 @@ Route::get('/matricula/{id}', [
 Route::get('/matricula', [
     'uses' => 'HallmarksController@show',
 ]);
+
+Route::get('/info', function () {
+    return view('hallmark.info');
+});
