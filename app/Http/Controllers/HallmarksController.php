@@ -9,7 +9,7 @@ class HallmarksController extends Controller
 {
     public function getTag($id){
         try{
-            $hallmark = Hallmark::where('plate', '=', $id)->get();
+            $hallmark = Hallmark::find($id);
 
             $hallmark->id = $id;
             $hallmark->tagType = $this->tagType($hallmark->tag);
