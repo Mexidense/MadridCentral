@@ -26,3 +26,7 @@ Route::get('/matricula', [
 Route::get('/info', function () {
     return view('hallmark.info');
 });
+
+Route::get('/api', function () {
+    return view('hallmark.api');
+});
