@@ -37,6 +37,9 @@
                             'placeholder' => '0000ABC/XX0000YY',
                             'class' => 'form-control-lg text-center',
                             'required',
+                            'maxlength' => 10,
+                            'pattern' => '(([a-zA-Z]{1,}[0-9]{4}[a-zA-Z]{1,})|([0-9]{4}[a-zA-Z]{3}))',
+                            'title' => 'Introduzca la matricula correcta: XX0000YY / 0000ABC',
                         ])
                     !!}
                 </div>

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div style="padding-top: 30px;" class="container">
         <div class="jumbotron row text-white rounded bg-dark">
             <div class="col-md-7">
                 <h1 class="display-4 font-italic font-weight-bold">Madrid Central 2018</h1>
@@ -38,6 +38,29 @@
                 <img src="{{URL::asset('img/tags/' . $hallmark->tagType . '.png')}}" alt="Etiqueta {{$hallmark->tagType}}" height="350" width="350">
             </div>
         </div>
-
+        <i>Consulte otra matricula</i>
+        {!! Form::open([
+                'url' => '/matricula',
+                'method' => 'get',
+                ])
+                !!}
+        <div class="form-group">
+            {!!
+                Form::text('plate', '', [
+                    'placeholder' => '0000ABC/XX0000YY',
+                    'class' => 'form-control-lg text-center',
+                    'required',
+                    'maxlength' => 10,
+                    'pattern' => '(([a-zA-Z]{1,}[0-9]{4}[a-zA-Z]{1,})|([0-9]{4}[a-zA-Z]{3}))',
+                    'title' => 'Introduzca la matricula correcta: XX0000YY / 0000ABC',
+                ])
+            !!}
+            {!!
+            Form::submit('Consultar', [
+                'class' => 'btn btn-success',
+            ])
+            !!}
+                {!! Form::close() !!}
+        </div>
     </div>
 @endsection

@@ -4,7 +4,7 @@
     position: absolute;
     bottom: 5px;
     color: black;
-    padding-left: 40px;
+    padding-left: 170px;
 }
 h2{
     font-family: "Arial", Georgia, "Times New Roman", serif;
@@ -15,24 +15,24 @@ h2{
 .etiqueta-not{
     color: black;
     font-size: 60px;
-    background: white;
+    background: lightgrey;
     text-align: center;
 }
 .etiqueta-b{
     color: yellow;
     font-size: 120px;
-    background: white;
+    background: lightgrey;
     text-align: center;
 }
 .etiqueta-c{
     color: green;
     font-size: 120px;
-    background: white;
+    background: lightgrey;
     text-align: center;
 }
 .etiqueta-0{
     color: blue;
     font-size: 120px;
-    background: white;
+    background: lightgrey;
     text-align: center;
 }

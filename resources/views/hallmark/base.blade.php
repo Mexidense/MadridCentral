@@ -36,7 +36,7 @@
         <nav class="site-header sticky-top py-1">
             <div class="container d-flex flex-column flex-md-row justify-content-between">
                 <a class="py-2" href="/">
-                    <img src="/img/favicon.ico" width="24" height="24" />
+                    <img src="/img/favicon.ico" width="24" height="24" />&nbsp;&nbsp;Madrid Central
                 </a>
                 <a class="py-2 d-none d-md-inline-block" href="/info">Información general</a>
                 <a class="py-2 d-none d-md-inline-block" href="/api">API</a>
@@ -44,9 +44,7 @@
             </div>
         </nav>
     </header>
-
-    @yield('content')
-
+        @yield('content')
     <footer class="container py-5">
         <div class="row">
             <div class="col-12 col-md">

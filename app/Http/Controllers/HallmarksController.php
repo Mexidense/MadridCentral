@@ -19,17 +19,18 @@ class HallmarksController extends Controller
             ]);
 
         }catch (\Exception $e){
-            return redirect('/');
+            return view('hallmark.query')->with([
+                'plate' => $id,
+            ]);
         }
     }
 
     public function show(Request $request){
         try{
             $id = $request->input('plate');
-            if($id != '')
-                return  redirect('matricula/' . $id);
-            else
-                return redirect('/');
+            if($id !== '')
+                return $this->getTag($id);
+
         }catch (\Exception $e){
             return redirect('/');
         }
