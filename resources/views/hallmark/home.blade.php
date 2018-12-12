@@ -9,13 +9,14 @@
         <div class="col-12">
                 <h1 class="display-4 font-weight-normal">Consulta tu matricula</h1>
                 <p class="lead font-weight-normal">Identifique el distintivo medioambiental de su vehículo con la matricula.</p>
-            <p>Sabrá si posee una etiqueta ambiental 0, ECO, B o C.</p>
+            {{--<p>Sabrá si posee una etiqueta ambiental 0, ECO, B o C.</p>--}}
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <img style="width: 80%;" class="" src="{{URL::asset('/img/logoMadridCentral.jpg')}}" alt="Card image cap">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <img style="width: 80%;" class="" src="{{URL::asset('/img/logoMadridCentral.png')}}" alt="Card image cap">
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <p>Sabrá si posee una etiqueta ambiental 0, ECO, B o C.</p>
                 <div class="matricula">
                     <img src="{{URL::asset('/img/matricula.png')}}" alt="Matricula">
                 </div>
@@ -50,14 +51,22 @@
                 !!}
                 {!! Form::close() !!}
             </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <h2>Twitter Ayuntamiento de Madrid</h2>
+                <a class="twitter-timeline" data-lang="es" data-width="500" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/MADRID">Información del Twitter del Ayuntamiento de Madrid</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
     </div>
-
+    <div class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" >
+        <div id='allTagsChart' class="d-none d-sm-block col-sm-12">
+        </div>
+    </div>
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Etiqueta Ambiental B - Amarilla</h2>
-                <img src="{{URL::asset('img/tags/B.png')}}"/>
+                <img src="{{URL::asset('img/tags/B.png')}}" style="width: 80%;"/>
                 <div class="text-justify">
                     <p class="lead">Turismos y comerciales ligeros, clasificados en el Registro de Vehículos como gasolina EURO 3/III o Diésel EURO 4/IV o 5/V.</p>
                     <p>Vehículos de más de 8 plazas y transporte de mercancías, clasificados en el Registro de Vehículos con nivel de emisiones del vehículos sea Euro IV/4 o V/5, indistintamente del tipo de combustible.</p>
@@ -68,7 +77,7 @@
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Etiqueta Ambiental C - Verde</h2>
-                <img src="{{URL::asset('img/tags/C.png')}}"/>
+                <img src="{{URL::asset('img/tags/C.png')}}" style="width: 80%;"/>
                 <div class="text-justify">
                     <p class="lead">Turismos y comerciales ligeros, clasificados en el Registro de Vehículos como gasolina EURO 4/IV, 5/V o 6/VI o diésel EURO 6/VI.</p>
                     <p>Vehículos de más de 8 plazas y transporte de mercancías, clasificados en el Registro de Vehículos con nivel de emisiones del vehículos sea EURO 6/VI, indistintamente del tipo de combustible.</p>
@@ -77,12 +86,11 @@
             </div>
         </div>
     </div>
-    <div id='allTagsChart' style="height: 600px;" class="row position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"></div>
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
                 <h2 class="display-5">Etiqueta Ambiental Eco - Verde/Azul</h2>
-                <img src="{{URL::asset('img/tags/ECO.png')}}" style="width: 60%;"/>
+                <img src="{{URL::asset('img/tags/ECO.png')}}" style="width: 80%;"/>
                 <div class="text-justify">
                     <p class="lead">Turismos y comerciales ligeros, clasificados en el Registro de Vehículos como vehículos híbridos enchufables con autonomía <40km, vehículos híbridos no enchufables (HEV), vehículos propulsados por gas natural, vehículos propulsados por gas natural comprimido (GNC) o gas licuado del petróleo (GLP). En todo caso, además deberán cumplir los siguientes parámetro, Vehículos con combustible gasolina con nivel de emisiones EURO 4/IV, 5/V o 6/VI o combustible diésel con nivel de emisiones EURO 6/VI.</p>
                     <p>Vehículos de más de 8 plazas y transporte de mercancías, clasificados en el Registro de Vehículos como híbridos enchufables con autonomía <40km, híbridos no enchufables (HEV), propulsados por gas natural comprimido (GNC), gas natural licuado (GNL) o gas licuado del petróleo (GLP). En todo caso, además deberán cumplir que el nivel de emisiones del vehículos sea EURO 6/VI, indistintamente del tipo de combustible.</p>
@@ -93,7 +101,7 @@
         <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">Etiqueta Ambiental 0 - Azul</h2>
-                <img src="{{URL::asset('img/tags/0.png')}}"/>
+                <img src="{{URL::asset('img/tags/0.png')}}" style="width: 80%;"/>
                 <div class="text-justify">
                     <p class="lead">Vehículos clasificados en el Registro de Vehículos como vehículos eléctricos de batería (BEV), vehículo eléctrico de autonomía extendida (REEV), vehículo eléctrico híbrido enchufable (PHEV) con una autonomía mínima de 40 kilómetros o vehículos de pila de combustible.</p>
                 </div>

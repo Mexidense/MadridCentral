@@ -5,7 +5,7 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Etiqueta', 'Tipo', { role: 'style' }, { role: 'annotation' }],
+        ['Tipo de etiqueta', 'Cantidad de vehículos', { role: 'style' }, { role: 'annotation' }],
         ['Etiqueta 0 - Azul', 50203, 'color: blue', '0'],
         ['Etiqueta ECO - Verde/Azul', 274752, 'color: green', 'ECO'],
         ['Etiqueta C - Verde', 8519700, 'color: green', 'C'],
@@ -16,10 +16,9 @@ function drawChart() {
     // Optional; add a title and set the width and height of the chart
     var options = {
         chart: {
-            title:'Proporción etiquetas medioambientales',
+            title:'Vehículos con distintivos medioambientales',
             subtitle: 'Fuente: Portal Estadístico de la DGT - Diciembre 2018'
         },
-        chartArea: {width: '50%'},
         vAxis: {
             title: 'Tipo de etiqueta'
         },
@@ -28,8 +27,11 @@ function drawChart() {
             minValue: 0,
         },
         bars: 'horizontal',
-        bar: { groupWidth: "90%" }
-
+        chartArea: {
+            'width': '100%',
+            'height': '80%'
+        },
+        height: 600,
     };
 
     var view = new google.visualization.DataView(data);
