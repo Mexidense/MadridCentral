@@ -35,7 +35,7 @@
                 </p>
             </div>
             <div class="col-md-5">
-                <img src="{{URL::asset('img/tags/' . $hallmark->tagType . '.png')}}" alt="Etiqueta {{$hallmark->tagType}}" height="350" width="350">
+                <img src="{{URL::asset('img/tags/' . $hallmark->tagType . '.png')}}" alt="Etiqueta {{$hallmark->tagType}}" width="100%">
             </div>
         </div>
         <i>Consulte otra matricula</i>
